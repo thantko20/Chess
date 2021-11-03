@@ -9,12 +9,14 @@ class Board
 
   def initialize
     @position_grid = set_default_postion
+    assign_positions_to_each_piece
   end
 
   def update_board
     # Update the board
     # Will get the piece and destroy its current postion,
     # and update its new position
+    assign_positions_to_each_piece
   end
 
   private
@@ -35,5 +37,13 @@ class Board
     default_array[6] = Array.new(8) { Pawn.new('b', black_pawn) } # pppppppp
 
     default_array
+  end
+
+  def assign_positions_to_each_piece
+    8.times do |row|
+      8.times do |column|
+        @position_grid[row][column].current_position = [row, column]  if !@position_grid[row][column].nil?
+      end
+    end
   end
 end

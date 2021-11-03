@@ -1,5 +1,6 @@
 class Piece
   attr_reader :symbol, :colour
+  attr_accessor :current_position
 
   def initialize(colour, symbol)
     @colour = colour
