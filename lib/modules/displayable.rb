@@ -9,17 +9,18 @@ module Displayable
 
   class DisplayBoard
     def self.display_board_interface(grid)
-      # Implementation Here
       8.times do |y|
+        y = 7 - y
         8.times do |x|
-          (y + x) % 2 == 0 ? print("\e[41m#{single_square_blueprint(grid[y][x])}\e[0m") : print("\e[47m#{single_square_blueprint(grid[y][x])}\e[0m")
+          (x + y).even? ? print("\e[41m#{single_square_blueprint(grid[y][x])}\e[0m") : print("\e[42m#{single_square_blueprint(grid[y][x])}\e[0m")
         end
         puts
       end
+      p grid[0][3]
     end
 
     def self.single_square_blueprint(square)
-      square == nil ? '  ' : "#{square.symbol} "
+      square.nil? ? '  ' : "#{square.symbol} "
     end
   end
 end

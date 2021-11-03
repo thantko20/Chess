@@ -26,7 +26,7 @@ class Board
     
     # Set default positions for white pieces
     default_array[0] = [Rook.new('w', white_rook), Knight.new('w', white_knight), Bishop.new('w', white_bishop), Queen.new('w', white_queen),
-                        King.new('w', white_king), Bishop.new('w', white_bishop), Knight.new('w', white_knight), Rook.new('w', white_knight)] # RKBQKBKR
+                        King.new('w', white_king), Bishop.new('w', white_bishop), Knight.new('w', white_knight), Rook.new('w', white_rook)] # RKBQKBKR
     default_array[1] = Array.new(8) { Pawn.new('w', white_pawn) } # PPPPPPPP
     
     # Set default positions for black pieces

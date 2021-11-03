@@ -40,10 +40,10 @@ module PiecesSymbols
   end
 
   def black_king
-    "\u2654"
+    "\u265a"
   end
 
   def white_king
-    "\u265a"
+    "\u2654"
   end
 end

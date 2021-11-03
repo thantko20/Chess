@@ -14,6 +14,7 @@ class Game
   def play
     # Intro implementation
     # Game Loop Implementation
+    game_loop
   end
 
   def game_loop
@@ -39,4 +40,4 @@ class Game
 end
 
 game = Game.new
-game.game_loop
+game.play
