@@ -16,7 +16,6 @@ module Displayable
         end
         puts
       end
-      p grid[0][3]
     end
 
     def self.single_square_blueprint(square)
