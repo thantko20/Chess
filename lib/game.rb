@@ -11,6 +11,8 @@ class Game
     # Game Loop Implementation
   end
 
+  private
+
   def game_loop
     # Program Logic
     # Keep track of current player

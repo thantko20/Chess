@@ -3,6 +3,14 @@ class Board
     @position_grid = set_default_postion
   end
 
+  def update_board
+    # Update the board
+    # Will get the piece and destroy its current postion,
+    # and update its new position
+  end
+
+  private
+
   def set_default_postion
     # Set all the pieces to starting positions
     # 8x8 grid
@@ -17,11 +25,5 @@ class Board
     default_array[7] = nil # pppppppp
 
     default_array
-  end
-
-  def update_board
-    # Update the board
-    # Will get the piece and destroy its current postion,
-    # and update its new position
   end
 end
