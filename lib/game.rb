@@ -1,8 +1,13 @@
+require_relative "./modules/displayable"
+require_relative "board"
+
 class Game
+  include Displayable
+
   def initialize
     @player1 = nil
     @player2 = nil
-    @board = nil
+    @board = Board.new
     @curr_player = nil
   end
 
@@ -11,14 +16,13 @@ class Game
     # Game Loop Implementation
   end
 
-  private
-
   def game_loop
     # Program Logic
     # Keep track of current player
     # Select the piece implementation
     # Move the piece implementation
     # Check and Checkmate Implementaion
+    DisplayBoard.display_board_interface(@board.position_grid)
   end
 
   def select_piece
@@ -33,3 +37,6 @@ class Game
     # Allow only legit moves and set the new postion on the board
   end
 end
+
+game = Game.new
+game.game_loop

@@ -1,15 +1,15 @@
 require_relative "../main_piece_class"
 
 module Pieces
-  class King; end
+  class King < Piece; end
 
-  class Queen; end
+  class Queen < Piece; end
 
-  class Rook; end
+  class Rook < Piece; end
 
-  class Bishop; end
+  class Bishop < Piece; end
 
-  class Knight; end
+  class Knight < Piece; end
 
-  class Pawn; end
+  class Pawn < Piece; end
 end
