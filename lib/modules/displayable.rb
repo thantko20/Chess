@@ -2,7 +2,7 @@ require "pry-byebug"
 
 module Displayable
   class DisplayText
-    def instructions
+    def self.instructions
       # TODO
     end
   end
@@ -12,7 +12,7 @@ module Displayable
       8.times do |y|
         y = 7 - y
         8.times do |x|
-          (x + y).even? ? print("\e[41m#{single_square_blueprint(grid[y][x])}\e[0m") : print("\e[42m#{single_square_blueprint(grid[y][x])}\e[0m")
+          (x + y).even? ? print("\e[40m#{single_square_blueprint(grid[y][x])}\e[0m") : print("\e[105m#{single_square_blueprint(grid[y][x])}\e[0m")
         end
         puts
       end
